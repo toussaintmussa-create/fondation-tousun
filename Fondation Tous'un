@@ -1,0 +1,58 @@
+index.html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fondation Tous'un - Lubumbashi</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#222}
+header{background:#0a7a42;color:white;padding:60px 20px;text-align:center}
+header h1{font-size:42px;margin:0}
+header p{font-size:20px}
+.btn{display:inline-block;background:#ffcc00;color:#000;padding:15px 25px;border-radius:30px;text-decoration:none;font-weight:bold;margin:10px}
+section{padding:40px 20px;max-width:800px;margin:auto;text-align:center}
+.cards{display:flex;flex-wrap:wrap;gap:15px;justify-content:center}
+.card{background:#f2f2f2;padding:20px;border-radius:15px;width:220px}
+footer{background:#111;color:white;padding:30px;text-align:center}
+a{color:#0a7a42}
+</style>
+</head>
+<body>
+<header>
+<h1>FONDATION TOUS'UN</h1>
+<p>Parce que personne ne doit être seul.</p>
+<p>Nous aidons les enfants orphelins, les enfants abandonnés, et les mamans.</p>
+<a class="btn" href="https://wa.me/243997786690">Faire un don sur WhatsApp</a>
+<a class="btn" href="https://wa.me/243997786690">Nous contacter</a>
+</header>
+<section>
+<h2>Qui sommes-nous ?</h2>
+<p>La Fondation Tous'un est née à Lubumbashi, Katanga - RDC, avec une mission simple : aider les enfants orphelins, les enfants abandonnés par les familles, et soutenir les mamans en difficulté.</p>
+<p>Notre président, <b>Toussaint Mussa</b>, croit que chaque enfant mérite l'amour, la protection et un avenir.</p>
+</section>
+<section>
+<h2>Nos Actions</h2>
+<div class="cards">
+<div class="card"><h3>❤️ Enfants Orphelins</h3><p>Nous soutenons les enfants qui ont perdu leurs parents.</p></div>
+<div class="card"><h3>🏠 Enfants Abandonnés</h3><p>Nous aidons les enfants abandonnés par les familles à retrouver espoir.</p></div>
+<div class="card"><h3>👩‍👧 Mamans</h3><p>Nous accompagnons les mamans en difficulté pour protéger leurs enfants.</p></div>
+</div>
+</section>
+<section>
+<h2>Faire un don</h2>
+<p>Ton don peut changer une vie. Un repas, des vêtements, une scolarité.</p>
+<a class="btn" href="https://wa.me/243997786690?text=Bonjour%20Fondation%20Tous'un%2C%20je%20veux%20faire%20un%20don">Je veux faire un don</a>
+</section>
+<section>
+<h2>Contact</h2>
+<p><b>Lubumbashi, Katanga - RDC</b></p>
+<p>WhatsApp / Tél : <b>+243 997786690</b></p>
+<p><a href="https://wa.me/243997786690">Écrire sur WhatsApp</a></p>
+</section>
+<footer>
+<p>© 2026 Fondation Tous'un - Lubumbashi</p>
+<p>Fondée par Président Toussaint Mussa</p>
+</footer>
+</body>
+</html>
