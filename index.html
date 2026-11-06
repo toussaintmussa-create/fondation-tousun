@@ -21,7 +21,19 @@ footer{background:#111;color:white;padding:30px;text-align:center}
 a{color:#0a7a42}
 </style>
 </head>
-<body>
+<body><!-- BOUTON INSTALLER -->
+<div style="text-align:center;padding:15px;background:#fff3cd;">
+<button id="btnInstaller" style="background:#0a7a42;color:white;font-size:18px;padding:15px 20px;border:none;border-radius:10px;">📲 CLIQUER ICI POUR INSTALLER L'APPLI</button>
+<p style="font-size:14px;">Si ça ne marche pas, clique sur les 3 points en haut puis "Installer"</p>
+</div>
+<script>
+let installPrompt=null;
+window.addEventListener('beforeinstallprompt', (e)=>{e.preventDefault();installPrompt=e;});
+document.getElementById('btnInstaller').addEventListener('click', async ()=>{
+if(installPrompt){installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;}
+else{alert("Sur Chrome : clique sur les 3 points en haut a droite, puis sur Installer l'application");}});
+</script>
+<!-- FIN BOUTON -->
 <header>
 <h1>FONDATION TOUS'UN</h1>
 <p>Parce que personne ne doit être seul.</p>
