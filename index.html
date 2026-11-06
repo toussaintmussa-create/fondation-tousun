@@ -62,6 +62,35 @@ else{alert("Sur Chrome : clique sur les 3 points en haut a droite, puis sur Inst
 <p>Ton don peut changer une vie. Un repas, des vêtements, une scolarité.</p>
 <a class="btn" href="https://wa.me/243997786690?text=Bonjour%20Fondation%20Tous'un%2C%20je%20veux%20faire%20un%20don">Je veux faire un don</a>
 </section>
+  <!-- INSCRIPTION WAHOU -->
+<section id="inscription" style="padding:25px 15px;background:linear-gradient(135deg,#FFF8E1,#FFF3CD);">
+<div style="max-width:500px;margin:auto;background:white;border-radius:20px;padding:25px;box-shadow:0 10px 30px rgba(0,0,0,0.15);">
+
+<h2 style="text-align:center;color:#1A237E;margin:0;">📝 S'INSCRIRE</h2>
+<p style="text-align:center;color:#666;font-size:14px;">Rejoins la famille Fondation Tous'Un</p>
+
+<label style="font-weight:bold;font-size:13px;">Ton Nom complet</label>
+<input id="nomMembre" type="text" placeholder="Ex: Amina Kabongo" style="width:100%;padding:13px;margin:5px 0 15px 0;border:2px solid #FFE082;border-radius:12px;font-size:15px;">
+
+<label style="font-weight:bold;font-size:13px;">Ton Numéro WhatsApp</label>
+<input id="telMembre" type="tel" placeholder="Ex: 097 000 0000" style="width:100%;padding:13px;margin:5px 0 15px 0;border:2px solid #FFE082;border-radius:12px;font-size:15px;">
+
+<label style="font-weight:bold;font-size:13px;">Ton Quartier à Lubumbashi</label>
+<input id="quartierMembre" type="text" placeholder="Ex: Kigoma, Kampemba..." style="width:100%;padding:13px;margin:5px 0 15px 0;border:2px solid #FFE082;border-radius:12px;font-size:15px;">
+
+<label style="font-weight:bold;font-size:13px;">Je suis :</label>
+<select id="roleMembre" style="width:100%;padding:13px;margin:5px 0 20px 0;border:2px solid #FFE082;border-radius:12px;font-size:15px;">
+<option value="Maman qui a besoin d'aide">🤱 Maman qui a besoin d'aide</option>
+<option value="Bénévole qui veut aider">🙋 Bénévole qui veut aider</option>
+<option value="Donateur">❤️ Donateur</option>
+</select>
+
+<button onclick="envoyerInscription()" style="width:100%;padding:15px;background:#FFC107;color:#1A237E;border:none;border-radius:12px;font-weight:bold;font-size:16px;">ENVOYER MON INSCRIPTION 🚀</button>
+
+<p style="text-align:center;font-size:12px;color:#999;margin-top:10px;">Ton numéro reste privé, seul le Président le verra.</p>
+
+</div>
+</section>
 <section>
 <h2>Contact</h2>
 <p><b>Lubumbashi, Katanga - RDC</b></p>
@@ -72,5 +101,22 @@ else{alert("Sur Chrome : clique sur les 3 points en haut a droite, puis sur Inst
 <p>© 2026 Fondation Tous'un - Lubumbashi</p>
 <p>Fondée par Président Toussaint Mussa</p>
 </footer>
+  <script>
+function envoyerInscription(){
+var nom = document.getElementById('nomMembre').value;
+var tel = document.getElementById('telMembre').value;
+var quartier = document.getElementById('quartierMembre').value;
+var role = document.getElementById('roleMembre').value;
+
+if(nom=="" || tel==""){
+alert("Président, dis à la personne de remplir son Nom et son Numéro svp");
+return;
+}
+
+var message = "Bonjour Président, je veux m'inscrire à la Fondation Tous'Un%0A%0ANom: " + nom + "%0ATéléphone: " + tel + "%0AQuartier: " + quartier + "%0AJe suis: " + role;
+
+window.open("https://wa.me/243997786690?text=" + message, "_blank");
+}
+  </script>
 </body>
 </html>
