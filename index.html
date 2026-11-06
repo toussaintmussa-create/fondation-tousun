@@ -22,12 +22,15 @@ a{color:#0a7a42}
 </style>
 </head>
 <body><!-- BOUTON INSTALLER -->
-<div style="text-align:center;padding:15px;background:#fff3cd;">
+<div id="installBanner" style="text-align:center;padding:15px;background:#fff3cd;">
 <button id="btnInstaller" style="background:#0a7a42;color:white;font-size:18px;padding:15px 20px;border:none;border-radius:10px;">📲 CLIQUER ICI POUR INSTALLER L'APPLI</button>
 <p style="font-size:14px;">Si ça ne marche pas, clique sur les 3 points en haut puis "Installer"</p>
 </div>
 <script>
 let installPrompt=null;
+  if (window.matchMedia('(display-mode: standalone)').matches) {
+    document.getElementById('installBanner').style.display='none';
+  }
 window.addEventListener('beforeinstallprompt', (e)=>{e.preventDefault();installPrompt=e;});
 document.getElementById('btnInstaller').addEventListener('click', async ()=>{
 if(installPrompt){installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;}
