@@ -1,0 +1,21 @@
+{
+  "name": "Fondation Tous'Un",
+  "short_name": "Tous'Un",
+  "start_url": "/fondation-tousun/",
+  "scope": "/fondation-tousun/",
+  "display": "standalone",
+  "background_color": "#0B3D2E",
+  "theme_color": "#0B3D2E",
+  "icons": [
+    {
+      "src": "IMG-20261106-WA0795.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "IMG-20261106-WA0795.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
