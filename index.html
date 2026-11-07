@@ -1,153 +1,115 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fondation Tous'un - Lubumbashi</title>
-  <link rel="manifest" href="manifest.json">
-<link rel="apple-touch-icon" href="IMG-20261106-WA0795.jpg">
-<meta name="theme-color" content="#0B3D2E">
+<title>Fondation Tous'Un</title>
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#222}
-header{background:#0a7a42;color:white;padding:60px 20px;text-align:center}
-header h1{font-size:42px;margin:0}
-header p{font-size:20px}
-.btn{display:inline-block;background:#ffcc00;color:#000;padding:15px 25px;border-radius:30px;text-decoration:none;font-weight:bold;margin:10px}
-section{padding:40px 20px;max-width:800px;margin:auto;text-align:center}
-.cards{display:flex;flex-wrap:wrap;gap:15px;justify-content:center}
-.card{background:#f2f2f2;padding:20px;border-radius:15px;width:220px}
-footer{background:#111;color:white;padding:30px;text-align:center}
-a{color:#0a7a42}
+body{font-family:Arial;margin:0;background:#fff8f0;color:#222}
+header{background:#ff6b00;color:white;text-align:center;padding:25px 15px}
+header h1{margin:0;font-size:28px}
+header p{margin:5px 0}
+nav{display:flex;justify-content:center;gap:8px;padding:10px;background:white;position:sticky;top:0}
+nav button{border:2px solid #ff6b00;background:white;color:#ff6b00;padding:10px 14px;border-radius:20px;font-weight:bold;cursor:pointer}
+nav button.active{background:#ff6b00;color:white}
+.box{max-width:500px;margin:15px auto;padding:15px;background:white;border-radius:15px;box-shadow:0 2px 10px #0001}
+input,select{width:100%;padding:12px;margin:7px 0;border:1px solid #ddd;border-radius:10px;box-sizing:border-box}
+.btn{width:100%;padding:13px;background:#ff6b00;color:white;border:none;border-radius:10px;font-weight:bold;font-size:16px;cursor:pointer}
+.card{background:#fff3e6;padding:12px;border-radius:12px;margin:8px 0}
+.total{background:#e8f5e9;padding:15px;border-radius:12px;text-align:center;font-weight:bold;font-size:18px}
+.small{font-size:13px;color:#666;text-align:center}
 </style>
 </head>
-<body><!-- BOUTON INSTALLER -->
-<div id="installBanner" style="text-align:center;padding:15px;background:#fff3cd;">
-<button id="btnInstaller" style="background:#0a7a42;color:white;font-size:18px;padding:15px 20px;border:none;border-radius:10px;">📲 CLIQUER ICI POUR INSTALLER L'APPLI</button>
-<p style="font-size:14px;">Si ça ne marche pas, clique sur les 3 points en haut puis "Installer"</p>
-</div>
-<script>
-let installPrompt=null;
-  if (window.matchMedia('(display-mode: standalone)').matches) {
-    document.getElementById('installBanner').style.display='none';
-  }
-window.addEventListener('beforeinstallprompt', (e)=>{e.preventDefault();installPrompt=e;});
-document.getElementById('btnInstaller').addEventListener('click', async ()=>{
-if(installPrompt){installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;}
-else{alert("Sur Chrome : clique sur les 3 points en haut a droite, puis sur Installer l'application");}});
-</script>
-<!-- FIN BOUTON -->
+<body>
 <header>
-<h1>FONDATION TOUS'UN</h1>
-<p>Parce que personne ne doit être seul.</p>
-<p>Nous aidons les enfants orphelins, les enfants abandonnés, et les mamans.</p>
-<a class="btn" href="https://wa.me/243997786690">Faire un don sur WhatsApp</a>
-<a class="btn" href="https://wa.me/243997786690">Nous contacter</a>
+<h1>🤝 Fondation Tous'Un</h1>
+<p>Président : Toussaint Mussa</p>
+<p>Maman Béa • Papa Justin Mussa • Sœur Ruth la Rose</p>
 </header>
-<section>
-<h2>Qui sommes-nous ?</h2>
-<p>La Fondation Tous'un est née à Lubumbashi, Katanga - RDC, avec une mission simple : aider les enfants orphelins, les enfants abandonnés par les familles, et soutenir les mamans en difficulté.</p>
-<p>Notre président, <b>Toussaint Mussa</b>, croit que chaque enfant mérite l'amour, la protection et un avenir.</p>
-</section>
-<section>
-<h2>Nos Actions</h2>
-<div class="cards">
-<div class="card"><h3>❤️ Enfants Orphelins</h3><p>Nous soutenons les enfants qui ont perdu leurs parents.</p></div>
-<div class="card"><h3>🏠 Enfants Abandonnés</h3><p>Nous aidons les enfants abandonnés par les familles à retrouver espoir.</p></div>
-<div class="card"><h3>👩‍👧 Mamans</h3><p>Nous accompagnons les mamans en difficulté pour protéger leurs enfants.</p></div>
-</div>
-</section>
-<section>
-<h2>Faire un don</h2>
-<p>Ton don peut changer une vie. Un repas, des vêtements, une scolarité.</p>
-<a class="btn" href="https://wa.me/243997786690?text=Bonjour%20Fondation%20Tous'un%2C%20je%20veux%20faire%20un%20don">Je veux faire un don</a>
-</section>
-  <!-- INSCRIPTION WAHOU -->
-<section id="inscription" style="padding:25px 15px;background:linear-gradient(135deg,#FFF8E1,#FFF3CD);">
-<div style="max-width:500px;margin:auto;background:white;border-radius:20px;padding:25px;box-shadow:0 10px 30px rgba(0,0,0,0.15);">
 
-<h2 style="text-align:center;color:#1A237E;margin:0;">📝 S'INSCRIRE</h2>
-<p style="text-align:center;color:#666;font-size:14px;">Rejoins la famille Fondation Tous'Un</p>
+<nav>
+<button onclick="show('accueil',this)" class="active">Accueil</button>
+<button onclick="show('inscrire',this)">S'INSCRIRE</button>
+<button onclick="show('membres',this)">MEMBRES</button>
+<button onclick="show('dons',this)">DONS</button>
+</nav>
 
-<label style="font-weight:bold;font-size:13px;">Ton Nom complet</label>
-<input id="nomMembre" type="text" placeholder="Ex: Amina Kabongo" style="width:100%;padding:13px;margin:5px 0 15px 0;border:2px solid #FFE082;border-radius:12px;font-size:15px;">
-
-<label style="font-weight:bold;font-size:13px;">Ton Numéro WhatsApp</label>
-<input id="telMembre" type="tel" placeholder="Ex: 097 000 0000" style="width:100%;padding:13px;margin:5px 0 15px 0;border:2px solid #FFE082;border-radius:12px;font-size:15px;">
-
-<label style="font-weight:bold;font-size:13px;">Ton Quartier à Lubumbashi</label>
-<input id="quartierMembre" type="text" placeholder="Ex: Kigoma, Kampemba..." style="width:100%;padding:13px;margin:5px 0 15px 0;border:2px solid #FFE082;border-radius:12px;font-size:15px;">
-
-<label style="font-weight:bold;font-size:13px;">Je suis :</label>
-<select id="roleMembre" style="width:100%;padding:13px;margin:5px 0 20px 0;border:2px solid #FFE082;border-radius:12px;font-size:15px;">
-<option value="Maman qui a besoin d'aide">🤱 Maman qui a besoin d'aide</option>
-<option value="Bénévole qui veut aider">🙋 Bénévole qui veut aider</option>
-<option value="Donateur">❤️ Donateur</option>
-</select>
-
-<button onclick="envoyerInscription()" style="width:100%;padding:15px;background:#FFC107;color:#1A237E;border:none;border-radius:12px;font-weight:bold;font-size:16px;">ENVOYER MON INSCRIPTION 🚀</button>
-
-<p style="text-align:center;font-size:12px;color:#999;margin-top:10px;">Ton numéro reste privé, seul le Président le verra.</p>
-
-</div>
-</section>
-  <!-- NOS MEMBRES -->
-<section style="padding:20px; text-align:center; background:#fff7ed;">
-<h2 style="color:#ea580c;">❤️ Nos Membres, Notre Famille</h2>
-<p>Ce sont eux qui font vivre la Fondation Tous'Un à Lubumbashi.</p>
-
-<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-top:15px;">
-
-<div style="background:white; border-radius:15px; padding:15px; width:220px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
-<div style="font-size:50px;">👩🏾</div>
-<h3 style="margin:5px 0;">Maman Béa</h3>
-<p style="font-size:13px; color:#666;">Maman bénéficiaire<br>Kigoma - Lubumbashi</p>
-<p style="background:#fef3c7; padding:5px; border-radius:20px; font-size:12px;">⭐ Maman Courage</p>
+<div id="accueil" class="box">
+<h2>Bienvenue !</h2>
+<p>Ensemble, nous aidons les familles de Lubumbashi.</p>
+<div class="total" id="totalAccueil">Chargement...</div>
+<p class="small">Les noms et les dons sont enregistrés sur ce téléphone.</p>
+<button class="btn" onclick="show('inscrire',null)">Je veux m'inscrire →</button><br><br>
+<button class="btn" style="background:#25D366" onclick="show('dons',null)">Je veux faire un don ❤️</button>
 </div>
 
-<div style="background:white; border-radius:15px; padding:15px; width:220px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
-<div style="font-size:50px;">🧑🏾</div>
-<h3 style="margin:5px 0;">Papa Justin mussa</h3>
-<p style="font-size:13px; color:#666;">Bénévole<br>Kamalondo - Lubumbashi</p>
-<p style="background:#dcfce7; padding:5px; border-radius:20px; font-size:12px;">💪 Bénévole Actif</p>
+<div id="inscrire" class="box" style="display:none">
+<h2>📝 S'INSCRIRE</h2>
+<input id="nom" placeholder="Ton nom complet">
+<input id="tel" placeholder="Téléphone ex: 0970000000">
+<input id="quartier" placeholder="Ton quartier">
+<select id="type"><option>Bénévole</option><option>Bénéficiaire</option><option>Membre</option></select>
+<button class="btn" onclick="ajouterMembre()">ENREGISTRER MON NOM ✅</button>
+<p id="msgMembre"></p>
 </div>
 
-<div style="background:white; border-radius:15px; padding:15px; width:220px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
-<div style="font-size:50px;">👧🏾</div>
-<h3 style="margin:5px 0;">Madame Ruth</h3>
-<p style="font-size:13px; color:#666;">Enfant soutenue<br>Ruashi - Lubumbashi</p>
-<p style="background:#dbeafe; padding:5px; border-radius:20px; font-size:12px;">📚 Va à l'école grâce à vous</p>
+<div id="membres" class="box" style="display:none">
+<h2>👥 NOS MEMBRES</h2>
+<div class="total" id="totalMembres"></div>
+<div id="listeMembres"></div>
 </div>
 
+<div id="dons" class="box" style="display:none">
+<h2>❤️ FAIRE UN DON</h2>
+<input id="nomDon" placeholder="Ton nom">
+<input id="montant" type="number" placeholder="Montant en FC ex: 10000">
+<select id="methode"><option>Orange Money</option><option>Airtel Money</option><option>Cash</option><option>M-Pesa</option></select>
+<button class="btn" onclick="ajouterDon()">ENVOYER MON DON 🙏</button>
+<p id="msgDon"></p>
+<hr>
+<h3>📊 Dons reçus</h3>
+<div class="total" id="totalDons"></div>
+<div id="listeDons"></div>
 </div>
-<p style="margin-top:15px; font-size:14px;">Tu veux faire partie de la famille ? <b>Inscris-toi en haut 👆</b></p>
-</section>
-<section>
-<h2>Contact</h2>
-<p><b>Lubumbashi, Katanga - RDC</b></p>
-<p>WhatsApp / Tél : <b>+243 997786690</b></p>
-<p><a href="https://wa.me/243997786690">Écrire sur WhatsApp</a></p>
-</section>
-<footer>
-<p>© 2026 Fondation Tous'un - Lubumbashi</p>
-<p>Fondée par Président Toussaint Mussa</p>
-</footer>
-  <script>
-function envoyerInscription(){
-var nom = document.getElementById('nomMembre').value;
-var tel = document.getElementById('telMembre').value;
-var quartier = document.getElementById('quartierMembre').value;
-var role = document.getElementById('roleMembre').value;
 
-if(nom=="" || tel==""){
-alert("Président, dis à la personne de remplir son Nom et son Numéro svp");
-return;
+<script>
+let membres = JSON.parse(localStorage.getItem('membres')||'[]');
+let dons = JSON.parse(localStorage.getItem('dons')||'[]');
+function show(id,btn){
+['accueil','inscrire','membres','dons'].forEach(x=>document.getElementById(x).style.display='none');
+document.getElementById(id).style.display='block';
+document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+if(btn) btn.classList.add('active');
+afficher();
 }
-
-var message = "Bonjour Président, je veux m'inscrire à la Fondation Tous'Un%0A%0ANom: " + nom + "%0ATéléphone: " + tel + "%0AQuartier: " + quartier + "%0AJe suis: " + role;
-
-window.open("https://wa.me/243997786690?text=" + message, "_blank");
+function ajouterMembre(){
+let n=document.getElementById('nom').value.trim();
+if(!n){alert('Écris ton nom d’abord');return;}
+membres.push({nom:n,tel:document.getElementById('tel').value,quartier:document.getElementById('quartier').value,type:document.getElementById('type').value,date:new Date().toLocaleDateString()});
+localStorage.setItem('membres',JSON.stringify(membres));
+document.getElementById('msgMembre').innerText='✅ Merci '+n+' ! Ton nom est bien enregistré !';
+document.getElementById('nom').value='';
+afficher();
 }
-  </script>
+function ajouterDon(){
+let n=document.getElementById('nomDon').value.trim();
+let m=parseInt(document.getElementById('montant').value);
+if(!n||!m){alert('Écris ton nom et le montant');return;}
+dons.push({nom:n,montant:m,methode:document.getElementById('methode').value,date:new Date().toLocaleDateString()});
+localStorage.setItem('dons',JSON.stringify(dons));
+document.getElementById('msgDon').innerText='✅ Merci '+n+' ! Ton don de '+m+' FC est enregistré ! Que Dieu te bénisse !';
+document.getElementById('montant').value='';
+afficher();
+}
+function afficher(){
+let totalDon=dons.reduce((a,b)=>a+b.montant,0);
+document.getElementById('totalAccueil').innerText='👥 '+membres.length+' membres • ❤️ Total Dons : '+totalDon+' FC';
+document.getElementById('totalMembres').innerText='Nous sommes '+membres.length+' membres';
+document.getElementById('totalDons').innerText='Total : '+totalDon+' FC';
+document.getElementById('listeMembres').innerHTML=membres.length?membres.map(m=>'<div class="card">👤 <b>'+m.nom+'</b><br>📍 '+m.quartier+' • '+m.type+' • '+m.date+'</div>').join(''):'<p>Aucun membre pour le moment.</p>';
+document.getElementById('listeDons').innerHTML=dons.length?dons.map(d=>'<div class="card">❤️ <b>'+d.nom+'</b> - '+d.montant+' FC<br>'+d.methode+' • '+d.date+'</div>').join(''):'<p>Aucun don pour le moment.</p>';
+}
+afficher();
+</script>
 </body>
 </html>
